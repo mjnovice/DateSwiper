@@ -1,6 +1,6 @@
   a = setInterval(
     function(){
-          var ran := Math.random();
+          var ran = Math.random();
           var time = ran*1000;
           var dislike = Math.floor(ran*100);
           var mod = 11;
