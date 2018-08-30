@@ -1,7 +1,6 @@
   a = setInterval(
     function(){
           var ran = Math.random();
-          var time = ran*1000;
           var dislike = Math.floor(ran*100);
           var mod = 11;
           var result = dislike%mod;
@@ -12,4 +11,4 @@
           var elem = document.getElementsByClassName("recsGamepad__button--like");
           elem[0].click();
           }
-          },time)
+          },2345)
