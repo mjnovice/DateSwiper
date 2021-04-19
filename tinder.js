@@ -19,7 +19,7 @@ randomLiker = function(percentage_likes){
 var longDelay=1700;
 var shortDelay=750;
 var longDelayChance=10;
-var likeChance=51;
+var likeChance=91;
 while (true) {
    var sleep=shortDelay;
    var result = randomPercentage();
@@ -27,6 +27,11 @@ while (true) {
       sleep=longDelay;
    }
    sleep+=randomPercentage();
-   randomLiker(likeChance);
+   try {
+          randomLiker(likeChance);
+   } catch(err) {
+          console.log(err)
+          await timer(sleep);
+   }
    await timer(sleep); 
 }
